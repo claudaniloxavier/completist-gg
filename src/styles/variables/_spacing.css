@@ -1,0 +1,15 @@
+:root {
+  --spacing-nano: 2px;
+  --spacing-tiny: 4px;
+  --spacing-xxxs: 8px;
+  --spacing-xxs: 12px;
+  --spacing-xs: 16px;
+  --spacing-sm: 20px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 64px;
+  --spacing-huge: 80px;
+  --spacing-giga: 128px;
+}

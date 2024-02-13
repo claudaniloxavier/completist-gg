@@ -1,0 +1,25 @@
+:root {
+  /* --family-primary: 'Inter', sans-serif;
+  --family-secondary: 'Archivo', sans-serif; */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-nano: 6px;
+  --font-size-tiny: 8px;
+  --font-size-xxxs: 12px;
+  --font-size-xxs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 18px;
+  --font-size-md: 20px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 40px;
+  --font-size-xxxl: 48px;
+
+  --line-height-primary: 4px;
+  --line-height-secondary: 8px;
+}

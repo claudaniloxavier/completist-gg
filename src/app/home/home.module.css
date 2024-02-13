@@ -1,0 +1,73 @@
+.teste {
+  font-size: 16px;
+}
+
+.primary,
+.error,
+.success,
+.warning {
+  font-size: 16px;
+
+  padding: var(--spacing-md);
+  margin: var(--spacing-md);
+  display: flex;
+}
+
+.primary>div,
+.error>div,
+.success>div,
+.warning>div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary>div:nth-child(1) {
+  background-color: var(--primary-light);
+}
+
+.primary>div:nth-child(2) {
+  background-color: var(--primary-default);
+}
+
+.primary>div:nth-child(3) {
+  background-color: var(--primary-dark);
+}
+
+.error>div:nth-child(1) {
+  background-color: var(--error-light);
+}
+
+.error>div:nth-child(2) {
+  background-color: var(--error-default);
+}
+
+.error>div:nth-child(3) {
+  background-color: var(--error-dark);
+}
+
+.success>div:nth-child(1) {
+  background-color: var(--success-light);
+}
+
+.success>div:nth-child(2) {
+  background-color: var(--success-default);
+}
+
+.success>div:nth-child(3) {
+  background-color: var(--success-dark);
+}
+
+.warning>div:nth-child(1) {
+  background-color: var(--warning-light);
+}
+
+.warning>div:nth-child(2) {
+  background-color: var(--warning-default);
+}
+
+.warning>div:nth-child(3) {
+  background-color: var(--warning-dark);
+}
