@@ -1,7 +1,9 @@
-import { Button } from 'orion-kit'
-
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+
+import styles from './toggle.module.scss'
+
+import Icon from '../Icon'
 
 const ToggleTheme = () => {
   const [mounted, setMounted] = useState(false)
@@ -21,9 +23,17 @@ const ToggleTheme = () => {
   }
 
   return (
-    <Button variant="primary" onClick={handleToggleTheme}>
-      Toggle Theme
-    </Button>
+    <label className={styles.toggleWrapper}>
+      <input
+        type="checkbox"
+        checked={theme === 'dark'}
+        onChange={handleToggleTheme}
+      />
+      <span className={styles.slider} />
+
+      <Icon variation="sun" />
+      <Icon variation="moon" />
+    </label>
   )
 }
 
