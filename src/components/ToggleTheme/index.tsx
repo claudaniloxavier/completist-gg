@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-import styles from './toggle.module.scss'
+import styles from './styles.module.scss'
 
 import Icon from '../Icon'
 

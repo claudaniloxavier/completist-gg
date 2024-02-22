@@ -4,6 +4,8 @@ import NextAuth from 'next-auth'
 // PROVIDERS
 import CredentialsProvider from 'next-auth/providers/credentials'
 
+import { login } from '@/services/login'
+
 const handler = NextAuth({
   pages: {
     signIn: '/login',
@@ -18,27 +20,13 @@ const handler = NextAuth({
       async authorize(credentials) {
         if (!credentials) return null
 
-        if (
-          credentials.username === 'claudanilo' &&
-          credentials.password === '123'
-        ) {
-          return {
-            id: '1',
-            name: 'claudanilo',
-            email: 'claudaniloxavier@gmail.com',
-          }
+        const response = await login(credentials)
+
+        if (response.status.code === 200 && response.data) {
+          console.log('Success')
+
+          return response.data
         }
-
-        // const res = await fetch('/your/endpoint', {
-        //   method: 'POST',
-        //   body: JSON.stringify(credentials),
-        //   headers: { 'Content-Type': 'application/json' },
-        // })
-        // const user = await res.json()
-
-        // if (res.ok && user) {
-        //   return user
-        // }
 
         return null
       },
