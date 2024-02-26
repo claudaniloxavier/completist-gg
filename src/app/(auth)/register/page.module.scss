@@ -1,4 +1,4 @@
-.login {
+.register {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -11,7 +11,7 @@
     font-size: var(--font-size-lg);
   }
 
-  .registerLink {
+  .loginLink {
     display: flex;
     align-items: center;
     justify-content: flex-end;

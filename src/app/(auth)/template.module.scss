@@ -1,0 +1,55 @@
+@use '../../styles/variables/breakpoints' as *;
+
+.authWrapper {
+  height: 100vh;
+
+  .page {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: $tablet-breakpoint) {
+      grid-template-columns: repeat(2, 60% 40%);
+    }
+
+    .about {
+      display: none;
+      font-size: var(--font-size-xl);
+
+      @media (min-width: $tablet-breakpoint) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .formWrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: var(--spacing-md);
+      gap: var(--spacing-lg);
+
+      border-left: var(--border-width-thin) solid var(--transparent-8);
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 48px;
+        font-size: var(--font-size-xl);
+      }
+
+      footer {
+        font-size: var(--font-size-xxs);
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          margin: 0 var(--spacing-tiny);
+        }
+      }
+    }
+  }
+}

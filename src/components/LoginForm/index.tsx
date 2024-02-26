@@ -36,13 +36,15 @@ const LoginForm = () => {
     })
   }
 
+  const { username, password } = state.values
+
   return (
     <form className={styles.form}>
       <fieldset>
         <TextField
           label="Username"
           name="username"
-          value={state.values.username}
+          value={username}
           block
           onChange={(e) => setValues({ username: e.target.value })}
         />
@@ -50,7 +52,7 @@ const LoginForm = () => {
         <TextField
           label="Password"
           name="password"
-          value={state.values.password}
+          value={password}
           block
           onChange={(e) => setValues({ password: e.target.value })}
         />
