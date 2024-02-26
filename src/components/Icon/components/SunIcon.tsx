@@ -1,9 +1,14 @@
-const SunIcon = () => {
+import { FC } from 'react'
+
+// TYPES
+import { CustomSVGProps } from '../types'
+
+const SunIcon: FC<CustomSVGProps> = ({ height = 16, width = 16 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width={width}
+      height={height}
       fill="none"
       viewBox="0 0 16 16"
     >

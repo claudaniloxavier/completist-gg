@@ -4,7 +4,7 @@ import NextAuth from 'next-auth'
 // PROVIDERS
 import CredentialsProvider from 'next-auth/providers/credentials'
 
-import { login } from '@/services/login'
+import { loginService } from '@/services/login'
 
 const handler = NextAuth({
   pages: {
@@ -20,7 +20,7 @@ const handler = NextAuth({
       async authorize(credentials) {
         if (!credentials) return null
 
-        const response = await login(credentials)
+        const response = await loginService(credentials)
 
         if (response.status.code === 200 && response.data) {
           console.log('Success')

@@ -1,9 +1,17 @@
-function MoonIcon() {
+import { FC } from 'react'
+
+// TYPES
+import { CustomSVGProps } from '../types'
+
+const MoonIcon: FC<CustomSVGProps> = ({
+  height = 16,
+  width = 16,
+}: CustomSVGProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="13"
-      height="14"
+      width={width}
+      height={height}
       fill="none"
       viewBox="0 0 13 14"
     >

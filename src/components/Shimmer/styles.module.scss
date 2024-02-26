@@ -1,0 +1,36 @@
+.shimmer {
+  background: linear-gradient(to right,
+      var(--background-secondary) 4%,
+      var(--background-tertiary) 25%,
+      var(--background-secondary) 36%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+
+  &.circle {
+    border-radius: var(--border-radius-circle);
+  }
+
+  &.rounded {
+    border-radius: var(--border-radius-sm);
+  }
+
+  &.pill {
+    border-radius: var(--border-radius-pill);
+  }
+
+  &.square {
+    border-radius: 0;
+  }
+}
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0%;
+  }
+}

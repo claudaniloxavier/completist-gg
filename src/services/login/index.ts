@@ -5,7 +5,7 @@ type LoginTypes = {
   password: string
 }
 
-export const login = async (params: LoginTypes) => {
+export const loginService = async (params: LoginTypes) => {
   const { data, headers } = await api.post('/login', {
     user: params,
   })

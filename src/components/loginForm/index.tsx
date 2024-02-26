@@ -38,19 +38,23 @@ const LoginForm = () => {
 
   return (
     <form className={styles.form}>
-      <TextField
-        label="Username"
-        name="username"
-        value={state.values.username}
-        onChange={(e) => setValues({ username: e.target.value })}
-      />
+      <fieldset>
+        <TextField
+          label="Username"
+          name="username"
+          value={state.values.username}
+          block
+          onChange={(e) => setValues({ username: e.target.value })}
+        />
 
-      <TextField
-        label="Password"
-        name="password"
-        value={state.values.password}
-        onChange={(e) => setValues({ password: e.target.value })}
-      />
+        <TextField
+          label="Password"
+          name="password"
+          value={state.values.password}
+          block
+          onChange={(e) => setValues({ password: e.target.value })}
+        />
+      </fieldset>
 
       <Button type="button" onClick={handleLogin}>
         Login

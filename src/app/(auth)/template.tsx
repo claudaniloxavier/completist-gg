@@ -1,9 +1,5 @@
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div>
-      <div>{children}</div>
-    </div>
-  )
+  return <section style={{ height: '100vh' }}>{children}</section>
 }
 
 export default AuthLayout

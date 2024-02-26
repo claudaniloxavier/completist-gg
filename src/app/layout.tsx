@@ -17,8 +17,9 @@ const inter = Inter({
 })
 
 const archivo = Archivo({
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-archivo',
 })
@@ -35,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={(inter.variable, archivo.variable)}>
+      <body className={`${archivo.className} ${inter.className}`}>
         <Providers attribute="class" defaultTheme="dark">
           {children}
         </Providers>

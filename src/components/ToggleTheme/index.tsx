@@ -1,6 +1,8 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
+import Shimmer from '@/components/Shimmer'
+
 import styles from './styles.module.scss'
 
 import Icon from '../Icon'
@@ -18,8 +20,7 @@ const ToggleTheme = () => {
   }, [])
 
   if (!mounted) {
-    // Add a Skeleton here
-    return null
+    return <Shimmer type="pill" width={60} height={34} />
   }
 
   return (
@@ -29,10 +30,10 @@ const ToggleTheme = () => {
         checked={theme === 'dark'}
         onChange={handleToggleTheme}
       />
-      <span className={styles.slider} />
-
-      <Icon variation="sun" />
-      <Icon variation="moon" />
+      <div className={styles.slider}>
+        <Icon variation="moon" height={20} width={20} />
+        <Icon variation="sun" height={20} width={20} />
+      </div>
     </label>
   )
 }

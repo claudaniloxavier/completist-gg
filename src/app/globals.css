@@ -28,6 +28,18 @@ svg {
   max-width: 100%;
 }
 
+legend {
+  padding: 0;
+  display: table;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -46,6 +58,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  margin: 0;
 }
 
 p {

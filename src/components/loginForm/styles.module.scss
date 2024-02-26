@@ -1,1 +1,15 @@
-.form {}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  button {
+    margin-top: 24px;
+  }
+}
