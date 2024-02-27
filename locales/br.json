@@ -1,0 +1,9 @@
+{
+  "Login": {
+    "title": "Login",
+    "username": "Nome de Usuário",
+    "password": "Senha",
+    "new_at_completist": "Novo no Completist?",
+    "create_account": "Criar uma conta"
+  }
+}

@@ -1,12 +1,16 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   redirects: async () => [
     {
       source: '/',
-      destination: '/home',
+      destination: '/en/home',
       permanent: true,
     },
   ],
 }
 
-export default nextConfig
+export default withNextIntl(nextConfig)

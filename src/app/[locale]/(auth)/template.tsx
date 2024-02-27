@@ -2,6 +2,7 @@
 
 // COMPONENTS
 import ToggleTheme from '@/components/ToggleTheme'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 // STYLES
 import styles from './template.module.scss'
@@ -17,6 +18,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
             <div>Logo Here</div>
 
             <ToggleTheme />
+            <LanguageSwitcher />
           </header>
 
           {children}

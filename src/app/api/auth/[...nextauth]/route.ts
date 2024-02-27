@@ -8,7 +8,7 @@ import { loginService } from '@/services/login'
 
 const handler = NextAuth({
   pages: {
-    signIn: '/login',
+    signIn: '/en/login',
   },
   providers: [
     CredentialsProvider({
