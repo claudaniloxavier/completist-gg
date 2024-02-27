@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 // PROVIDERS
 import Providers from '@/providers'
+import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 // FONTS
 import { Inter, Archivo } from 'next/font/google'
@@ -31,15 +32,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode
+  params: {
+    locale: string
+  }
 }>) {
+  const messages = useMessages()
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} ${archivo.variable}`}>
-        <Providers attribute="class" defaultTheme="dark">
-          {children}
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers attribute="class" defaultTheme="dark">
+            {children}
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

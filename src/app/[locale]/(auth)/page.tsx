@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 const Auth = () => {
   // ADJUST THIS TO MAKE LOGIN BE THE DEFAULT
   useEffect(() => {
-    redirect('/login')
+    redirect('/en/login')
   }, [])
 
   return null

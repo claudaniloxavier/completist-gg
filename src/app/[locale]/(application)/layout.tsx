@@ -5,7 +5,7 @@ const HomeLayout = async ({ children }: { children: React.ReactNode }) => {
   const session = await getServerSession()
 
   if (!session) {
-    redirect('/login')
+    redirect('/en/login')
   }
 
   return (

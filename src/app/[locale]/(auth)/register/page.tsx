@@ -17,7 +17,7 @@ const Register = () => {
       <div className={styles.loginLink}>
         <p>Already is a Completist?</p>
 
-        <Link href="/login">Login</Link>
+        <Link href="/en/login">Login</Link>
       </div>
     </section>
   )

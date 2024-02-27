@@ -1,13 +1,13 @@
 /* THEME */
-@import url('../styles/theme/_dark.css');
-@import url('../styles/theme/_light.css');
+@import url('../../styles/theme/_dark.css');
+@import url('../../styles/theme/_light.css');
 
 /* VARIABLES */
-@import url('../styles/variables/_border.css');
-@import url('../styles/variables/_font.css');
-@import url('../styles/variables/_spacing.css');
-@import url('../styles/variables/_zindex.css');
-@import url('../styles/variables/_colors.css');
+@import url('../../styles/variables/_border.css');
+@import url('../../styles/variables/_font.css');
+@import url('../../styles/variables/_spacing.css');
+@import url('../../styles/variables/_zindex.css');
+@import url('../../styles/variables/_colors.css');
 
 * {
   min-width: 0;
