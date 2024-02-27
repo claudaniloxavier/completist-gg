@@ -2,7 +2,7 @@
 
 // COMPONENTS
 import Link from 'next/link'
-import RegisterForm from '@/components/RegisterForm'
+import RegisterForm from '@/components/auth/RegisterForm'
 
 // STYLES
 import styles from './page.module.scss'

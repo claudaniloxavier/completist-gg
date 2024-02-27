@@ -1,30 +1,26 @@
-:root {
-  --primary-default: #845ef7;
+:root.dark,
+:root.light {
+  --primary-main: #845ef7;
   --primary-light: #9775fa;
   --primary-dark: #7950f2;
 
-  /* TBD soon */
-  --secondary-default: #f8f9fa;
-  --secondary-light: #f1f3f5;
-  --secondary-dark: #e9ecef;
-
-  --secondary-default: #6c757d;
+  --secondary-main: #6c757d;
   --secondary-light: #82868b;
   --secondary-dark: #515556;
 
-  --error-default: #FF6B6B;
+  --error-main: #FF6B6B;
   --error-light: #FF8787;
   --error-dark: #FA5252;
 
-  --success-default: #51CF66;
+  --success-main: #51CF66;
   --success-light: #69DB7C;
   --success-dark: #40C057;
 
-  --warning-default: #ffd75e;
+  --warning-main: #ffd75e;
   --warning-light: #ffe28a;
   --warning-dark: #ffcd36;
 
-  --default: #ced4da;
+  --default-main: #ced4da;
   --default-light: #adb5bd;
   --default-dark: #868e96;
 

@@ -13,7 +13,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-primary',
 })
 
 const archivo = Archivo({
@@ -21,7 +21,7 @@ const archivo = Archivo({
   display: 'swap',
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  variable: '--font-archivo',
+  variable: '--font-secondary',
 })
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${archivo.className} ${inter.className}`}>
+      <body className={`${inter.variable} ${archivo.variable}`}>
         <Providers attribute="class" defaultTheme="dark">
           {children}
         </Providers>

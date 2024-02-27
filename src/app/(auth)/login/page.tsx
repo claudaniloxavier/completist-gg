@@ -2,7 +2,7 @@
 
 // COMPONENTS
 import Link from 'next/link'
-import LoginForm from '@/components/LoginForm'
+import LoginForm from '@/components/auth/LoginForm'
 
 // STYLES
 import styles from './page.module.scss'
