@@ -1,5 +1,8 @@
 'use client'
 
+// I18N
+import { useTranslations } from 'next-intl'
+
 // COMPONENTS
 import { TextField, Button } from 'orion-kit'
 
@@ -24,6 +27,8 @@ type RegisterTypes = {
 }
 
 const RegisterForm = () => {
+  const t = useTranslations('Register')
+
   const { state, setValues } = useForm<RegisterTypes>(REGISTER_INITIAL_VALUES)
 
   const handleRegister = () => {
@@ -36,7 +41,7 @@ const RegisterForm = () => {
     <form className={styles.form}>
       <fieldset>
         <TextField
-          label="Name"
+          label={t('form.name')}
           name="name"
           value={name}
           block
@@ -44,14 +49,14 @@ const RegisterForm = () => {
         />
 
         <TextField
-          label="Username"
+          label={t('form.username')}
           name="username"
           value={username}
           block
           onChange={(e) => setValues({ username: e.target.value })}
         />
         <TextField
-          label="Email"
+          label={t('form.email')}
           name="email"
           value={email}
           block
@@ -59,7 +64,7 @@ const RegisterForm = () => {
         />
 
         <TextField
-          label="Password"
+          label={t('form.password')}
           name="password"
           value={password}
           block
@@ -68,7 +73,7 @@ const RegisterForm = () => {
       </fieldset>
 
       <Button type="button" onClick={handleRegister}>
-        Create Account
+        {t('form.register_button')}
       </Button>
     </form>
   )

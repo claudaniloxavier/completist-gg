@@ -11,5 +11,17 @@
     },
     "new_at_completist": "New at Completist?",
     "create_account": "Create account"
+  },
+  "Register": {
+    "title": "Create new account",
+    "form": {
+      "name": "Name",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "register_button": "Create account"
+    },
+    "already_a_completist": "Already is a Completist?",
+    "login": "login"
   }
 }
