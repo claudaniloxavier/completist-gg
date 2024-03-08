@@ -1,4 +1,4 @@
-html.dark {
+:root.dark {
   --background-primary: #141414;
   --background-secondary: #1f1f1f;
   --background-tertiary: #2d2d2d;

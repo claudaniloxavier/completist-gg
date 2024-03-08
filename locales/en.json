@@ -1,8 +1,14 @@
 {
+  "Auth": {
+    "made_with": "Made with ❤️ by <link> Claudanilo Xavier</link>"
+  },
   "Login": {
     "title": "Login",
-    "username": "Username",
-    "password": "Password",
+    "form": {
+      "username": "Username",
+      "password": "Password",
+      "login_button": "Login"
+    },
     "new_at_completist": "New at Completist?",
     "create_account": "Create account"
   }

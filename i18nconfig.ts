@@ -1,4 +1,4 @@
-type Locale = 'en' | 'br'
+export type Locale = 'en' | 'br'
 
 export const defaultLocale: Locale = 'en'
 

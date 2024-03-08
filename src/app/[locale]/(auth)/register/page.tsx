@@ -1,8 +1,8 @@
 'use client'
 
 // COMPONENTS
-import Link from 'next/link'
-import RegisterForm from '@/components/auth/RegisterForm'
+import { Link } from '@/navigation'
+import RegisterForm from '@/components/Auth/RegisterForm'
 
 // STYLES
 import styles from './page.module.scss'
@@ -17,7 +17,7 @@ const Register = () => {
       <div className={styles.loginLink}>
         <p>Already is a Completist?</p>
 
-        <Link href="/en/login">Login</Link>
+        <Link href="/login">Login</Link>
       </div>
     </section>
   )

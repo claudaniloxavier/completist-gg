@@ -1,0 +1,55 @@
+.select {
+  position: relative;
+  border: var(--border-width-thin) solid var(--transparent-8);
+  border-radius: var(--border-radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xxxs);
+    appearance: none;
+    background-color: transparent;
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding: 0 var(--spacing-tiny);
+    border-radius: 0;
+    height: 100%;
+
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border: none;
+    }
+
+    & .chevron {
+      transition: all 80ms ease-in-out;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: var(--spacing-tiny) 0 0;
+    padding: var(--spacing-tiny) 0;
+    list-style: none;
+    width: 100%;
+    background-color: var(--background-secondary);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    border-radius: none;
+  }
+}

@@ -1,34 +1,55 @@
 'use client'
+
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@/navigation'
-import { localeNames, locales, defaultLocale } from '../../../i18nconfig'
-import React from 'react'
+import { locales, defaultLocale, Locale } from '../../../i18nconfig'
+import React, { useState } from 'react'
+import Icon from '../Icon'
+import { IconProps } from '../Icon/types'
+
+import styles from './styles.module.scss'
+import classNames from 'classnames'
 
 const LanguageSwitcher = () => {
   const locale = useLocale()
   const router = useRouter()
   const pathName = usePathname()
 
-  const switchLocale = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    router.push(pathName, { locale: e.target.value })
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDropdown = () => setIsOpen(!isOpen)
+
+  const switchLocale = (locale: Locale) => {
+    router.push(pathName, { locale })
   }
 
   return (
-    <div>
-      <select
-        name="languageSwitcher"
-        id="language-switcher"
-        value={locale}
-        onChange={switchLocale}
-      >
-        {locales.map((locale) => (
-          <option key={locale} value={locale} defaultValue={defaultLocale}>
-            {localeNames[locale]}
-          </option>
-        ))}
-      </select>
+    <div className={styles.select}>
+      <button onClick={toggleDropdown}>
+        <Icon
+          width={32}
+          height={32}
+          variation={(locale as IconProps['variation']) || defaultLocale}
+        />
+
+        <div className={classNames(styles.chevron, { [styles.open]: isOpen })}>
+          <Icon width={16} height={16} variation={'chevron-down'} />
+        </div>
+      </button>
+
+      {isOpen && (
+        <ul className={styles.options}>
+          {locales.map((country) => (
+            <li key={crypto.randomUUID()} onClick={() => switchLocale(country)}>
+              <Icon width={32} height={32} variation={country} />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }
+
+// Create custom input for this case
 
 export default LanguageSwitcher

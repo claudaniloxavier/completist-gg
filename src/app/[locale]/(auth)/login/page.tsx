@@ -4,8 +4,8 @@
 import { useTranslations } from 'next-intl'
 
 // COMPONENTS
-import Link from 'next/link'
-import LoginForm from '@/components/auth/LoginForm'
+import { Link } from '@/navigation'
+import LoginForm from '@/components/Auth/LoginForm'
 
 // STYLES
 import styles from './page.module.scss'

@@ -1,5 +1,8 @@
 'use client'
 
+// I18N
+import { useTranslations } from 'next-intl'
+
 // COMPONENTS
 import ToggleTheme from '@/components/ToggleTheme'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
@@ -8,6 +11,8 @@ import LanguageSwitcher from '@/components/LanguageSwitcher'
 import styles from './template.module.scss'
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+  const t = useTranslations('Auth')
+
   return (
     <main className={styles.authWrapper}>
       <section className={styles.page}>
@@ -17,17 +22,22 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           <header>
             <div>Logo Here</div>
 
-            <ToggleTheme />
-            <LanguageSwitcher />
+            <div className={styles.actions}>
+              <LanguageSwitcher />
+              <ToggleTheme />
+            </div>
           </header>
 
           {children}
 
           <footer>
-            Made with ❤️ by
-            <a href="https://www.linkedin.com/in/claudaniloxavier/">
-              Claudanilo Xavier
-            </a>
+            {t.rich('made_with', {
+              link: (chunks) => (
+                <a href="https://www.linkedin.com/in/claudaniloxavier/">
+                  {chunks}
+                </a>
+              ),
+            })}
           </footer>
         </section>
       </section>

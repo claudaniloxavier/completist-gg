@@ -1,10 +1,16 @@
 'use client'
 
+import { useState, useCallback } from 'react'
+
+// I18N
+import { useTranslations } from 'next-intl'
+
 // UTILS
 import { signIn } from 'next-auth/react'
 
 // COMPONENTS
-import { TextField, Button } from 'orion-kit'
+import { TextField, Button, IconButton } from 'orion-kit'
+import Icon from '@/components/Icon'
 
 // HOOKS
 import useForm from '@/hooks/useForm'
@@ -24,6 +30,10 @@ type LoginTypes = {
 }
 
 const LoginForm = () => {
+  const t = useTranslations('Login')
+
+  const [showPassword, setShowPassword] = useState<boolean>(false)
+
   const { state, setValues } = useForm<LoginTypes>(LOGIN_INITIAL_VALUES)
 
   const searchParams = useSearchParams()
@@ -36,13 +46,17 @@ const LoginForm = () => {
     })
   }
 
+  const togglePasswordVisibility = useCallback((): void => {
+    setShowPassword((prevState) => !prevState)
+  }, [])
+
   const { username, password } = state.values
 
   return (
     <form className={styles.form}>
       <fieldset>
         <TextField
-          label="Username"
+          label={t('form.username')}
           name="username"
           value={username}
           block
@@ -50,16 +64,26 @@ const LoginForm = () => {
         />
 
         <TextField
-          label="Password"
-          name="password"
+          label={t('form.password')}
+          name="passwordss"
           value={password}
           block
+          type={showPassword ? 'text' : 'password'}
           onChange={(e) => setValues({ password: e.target.value })}
         />
+        <IconButton
+          size="small"
+          variant="default"
+          shape="clear"
+          type="button"
+          onClick={togglePasswordVisibility}
+        >
+          <Icon variation={showPassword ? 'visibility-on' : 'visibility-off'} />
+        </IconButton>
       </fieldset>
 
       <Button type="button" onClick={handleLogin}>
-        Login
+        {t('form.login_button')}
       </Button>
 
       {error === 'CredentialsSignin' && <p>Erro no login</p>}
